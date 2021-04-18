@@ -22,7 +22,7 @@ while running == True:
     lsint = [int(i) for i in numbers]
 #if there are no numbers if the string
     if len(lsint) == 0:
-        b = """sorry, I require numerical digits to funtion.
+        b = """sorry, I require numerical digits to function.
 Or type quit."""
 #if the input is something like 'a d6'
     elif len(lsint) == 1:
@@ -33,7 +33,7 @@ Or type quit."""
         b = randint(1,lsint[1])
         while a > 1:
             b = b + randint(1,lsint[1])
-            a = a - 1
+            a = a - 1   
     print(b)
     str = input("""What would you like to roll?
 """)
