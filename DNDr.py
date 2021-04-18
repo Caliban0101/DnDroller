@@ -4,7 +4,7 @@ from re import findall
 #dice rolling program
 #asking for input
 str = input("""
-Welcome to DnD dice roller! 
+Welcome to DnD dice roller!
 type 'quit' to close.
 What would you like to roll?
 
@@ -28,7 +28,6 @@ Or type quit."""
 
         b = 'you must choose dice to roll, or type quit'
 #if the input is something like 'a d6'
-
     elif len(lsint) == 1:
         b = randint(1,lsint[0])
 #normal case 6d6 etc.
@@ -43,5 +42,3 @@ Or type quit."""
 type quit to close
 """)
 print('Bye!')
-
-
