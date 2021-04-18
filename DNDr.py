@@ -35,7 +35,6 @@ Or type quit."""
             b = b + randint(1,lsint[1])
             a = a - 1
     print(b)
-    str = input("""What dice would you like to roll?
-type quit to close
+    str = input("""What would you like to roll?
 """)
 print('Bye!')
