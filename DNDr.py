@@ -16,10 +16,10 @@ while running == True:
     numbers = findall(r'\d+', str)
     lsint = [int(i) for i in numbers]
     if len(lsint) == 1:
-        print(randint(1, lsint[0]))
+        b = randint(1,lsint[0])
     elif len(lsint) > 1:
-    a = lsint[0]
-    b = randint(1,lsint[1])
+        a = lsint[0]
+        b = randint(1,lsint[1])
         while a > 1:
             b = b + randint(1,lsint[1])
             a = a - 1
