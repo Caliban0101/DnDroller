@@ -15,7 +15,9 @@ while running == True:
 #lsint is that list converted to integers
     numbers = findall(r'\d+', str)
     lsint = [int(i) for i in numbers]
-    if len(lsint) == 1:
+    if len(lsint) == 0:
+        b = 'you must choose dice to roll, or type quit'
+    elif len(lsint) == 1:
         b = randint(1,lsint[0])
     elif len(lsint) > 1:
         a = lsint[0]
