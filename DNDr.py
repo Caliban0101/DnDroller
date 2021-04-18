@@ -3,7 +3,12 @@ from re import findall
 
 #dice rolling program
 #asking for input
-str = input("What dice would you like to roll? (2d4 etc). type 'quit' to close")
+str = input("""
+Welcome to DnD dice roller! 
+type 'quit' to close.
+What would you like to roll?
+
+""")
 
 running = True
 while running == True:
@@ -15,10 +20,18 @@ while running == True:
 #lsint is that list converted to integers
     numbers = findall(r'\d+', str)
     lsint = [int(i) for i in numbers]
+#if there are no numbers if the string
     if len(lsint) == 0:
+<<<<<<< HEAD
+        b = """sorry, I require numerical digits to funtion.
+Or type quit."""
+=======
         b = 'you must choose dice to roll, or type quit'
+#if the input is something like 'a d6'
+>>>>>>> e4c35bb5e70882ab75438cbd6d46a27b3712bac4
     elif len(lsint) == 1:
         b = randint(1,lsint[0])
+#normal case 6d6 etc.
     elif len(lsint) > 1:
         a = lsint[0]
         b = randint(1,lsint[1])
@@ -26,7 +39,9 @@ while running == True:
             b = b + randint(1,lsint[1])
             a = a - 1
     print(b)
-    str = input("What dice would you like to roll? (2d4 etc). 'quit' to close")
+    str = input("""What dice would you like to roll?
+type quit to close
+""")
 print('Bye!')
 
 
