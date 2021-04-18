@@ -15,10 +15,13 @@ while running == True:
 #lsint is that list converted to integers
     numbers = findall(r'\d+', str)
     lsint = [int(i) for i in numbers]
+#if there are no numbers if the string
     if len(lsint) == 0:
         b = 'you must choose dice to roll, or type quit'
+#if the input is something like 'a d6'
     elif len(lsint) == 1:
         b = randint(1,lsint[0])
+#normal case 6d6 etc.
     elif len(lsint) > 1:
         a = lsint[0]
         b = randint(1,lsint[1])
