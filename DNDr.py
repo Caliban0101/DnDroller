@@ -1,5 +1,7 @@
 from random import randint
 from re import findall
+debugmode = 1
+
 
 #dice rolling program
 #asking for input
@@ -28,13 +30,17 @@ Or type quit."""
     elif len(lsint) == 1:
         b = randint(1,lsint[0])
 #normal case 6d6 etc.
+        
+        
     elif len(lsint) > 1:
         a = lsint[0]
-        b = randint(1,lsint[1])
-        while a > 1:
-            b = b + randint(1,lsint[1])
+        b = []
+        while a > 0:
+            b.append(randint(1,lsint[1]))
             a = a - 1   
-    print(b)
+    if debugmode == 1:
+        print(b)
+    print(sum(b))
     str = input("""What would you like to roll?
 """)
 print('Bye!')
