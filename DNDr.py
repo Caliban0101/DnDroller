@@ -1,6 +1,6 @@
 from random import randint
 from re import findall
-debugmode = 1
+debugmode = 0
 
 
 #dice rolling program
